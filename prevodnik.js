@@ -65,18 +65,19 @@ function dodatLbl() {
   textArea.value = modifiedTextAreaValue;
   return modifiedTextAreaValue;
 }
+
 const zkopirovani = (modifiedTextAreaValue) => {
   console.log("zkopirovani Started...");
 
-  const textArea = document.createElement("textarea");
-  textArea.value = modifiedTextAreaValue;
+  const textAreaEl = document.createElement("textarea");
+  textAreaEl.value = modifiedTextAreaValue;
 
-  document.body.appendChild(textArea);
+  document.body.appendChild(textAreaEl);
 
-  textArea.select();
+  textAreaEl.select();
   document.execCommand("copy");
 
-  document.body.removeChild(textArea);
+  document.body.removeChild(textAreaEl);
 
   showAlert();
 };
